@@ -3,5 +3,5 @@ import EmployeeView from "./views/EmployeeView.vue";
 </script>
 
 <template>
-<EmployeeView />
+  <EmployeeView />
 </template>
