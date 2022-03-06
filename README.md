@@ -6,7 +6,8 @@
 - Vue
 - Tailwind
 
-[Application Demo](https://still-peak-37738.herokuapp.com/)
+[Application Demo](http://greater-than-test.herokuapp.com/)
+
 
 
 ## Development
