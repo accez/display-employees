@@ -1,7 +1,7 @@
 <template>
   <div class="grid grid-cols-3 md:grid-cols-3 gap-3">
     <div
-      v-for="employee in props.employees"
+      v-for="employee in updateVisibleEmployees()"
       :key="employee.id"
       class="py-6 flex flex-col sm:py-12"
     >
@@ -30,16 +30,43 @@
       </div>
     </div>
   </div>
+      <Paginator @nextPage="nextPage" @previousPage="previousPage" />
+
 </template>
 
 <script setup>
-console.log(props.employees);
+import { ref } from "vue";
+import Paginator from "./PaginatorComponent.vue";
+
 const props = defineProps({
   employees: {
     type: Array,
     required: true,
   },
 });
+
+const itemsPerPage = ref(6);
+const currentPage = ref(0);
+const totalPages = props.employees.length / itemsPerPage.value
+
+const nextPage = () => {
+  if (currentPage.value < totalPages - 1) {
+    console.log(currentPage.value)
+     currentPage.value++
+  }
+}
+
+const previousPage = () => {
+  if(currentPage.value === 0){return}
+  currentPage.value--
+}
+
+const updateVisibleEmployees = () => {
+  return props.employees.slice(
+    (currentPage.value * itemsPerPage.value),
+    (currentPage.value * itemsPerPage.value) + itemsPerPage.value
+  );
+};
 
 const getAvatar = (employees) => {
   let splitName = employees.split(" ");
