@@ -26,7 +26,6 @@ npm run dev
 
 [@Simon Palmgren](https://github.com/accez)
 
-[@Love Beling](https://github.com/mikaellove)
 
 ## License
 
