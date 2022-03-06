@@ -1,7 +1,33 @@
-# Vue 3 + Vite
+# Greater than test
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+**Instructions:** This is a code test where i was told to build an application using th api from http://dummy.restapiexample.com/api/v1/employees and then make it look as presentable as possible. 
 
-## Recommended IDE Setup
+### Built with
+- Vue
+- Tailwind
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+[Application Demo](https://still-peak-37738.herokuapp.com/)
+
+
+## Development
+
+```bash
+# Clone project
+git clone https://github.com/accez/display-employees.git
+
+# Install dependencies
+npm install
+
+# Run local dev server
+npm run dev
+```
+
+## Maintainers
+
+[@Simon Palmgren](https://github.com/accez)
+
+[@Love Beling](https://github.com/mikaellove)
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
